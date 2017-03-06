@@ -62,9 +62,15 @@ var vocabulary = {
     "attention": ['ATTENTION SCUM:', 'ATTENTION SINNERS:']
 };
 
+// return a random element from any array
+// see: http://stackoverflow.com/q/4550505#7120353
+Array.prototype.randomElement = function () {
+    return this[Math.floor(Math.random() * this.length)];
+};
+
 // construct a quote
 var buildQuote = function() {
-    content = 'placeholder';
+    content = vocabulary.scum.randomElement();
 };
 
 // Run the quote function
