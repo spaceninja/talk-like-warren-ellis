@@ -64,7 +64,7 @@ var vocabulary = {
 
 // construct a quote
 var buildQuote = function() {
-    content = vocabulary.scum.randomElement();
+    content = 'placeholder';
 };
 
 // Run the quote function
