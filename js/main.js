@@ -62,12 +62,13 @@ var vocabulary = {
     "attention": ['ATTENTION SCUM:', 'ATTENTION SINNERS:']
 };
 
+// construct a quote
 var buildQuote = function() {
-    content = "blah blah";
+    content = vocabulary.scum.randomElement();
 };
 
-// Build the date list
+// Run the quote function
 buildQuote();
 
-// Write the date list to the browser
+// Write the quote to the browser
 document.getElementById('quote').innerHTML = content;
