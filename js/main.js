@@ -1,3 +1,4 @@
+/* global _ */
 var content = "";
 var vocabulary = {
 
@@ -64,7 +65,7 @@ var vocabulary = {
 
 // construct a quote
 var buildQuote = function() {
-    content = 'placeholder';
+    content = _.sample(vocabulary.scum);
 };
 
 // Run the quote function
