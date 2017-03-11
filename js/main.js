@@ -5,7 +5,9 @@ var xhr = new XMLHttpRequest();
 
 // construct a quote
 var buildQuote = function(vocabulary) {
-    content = _.sample(vocabulary.arbitrary_gnarbags);
+    content += _.sample(vocabulary.salutation) + ' ';
+    content += _.sample(vocabulary.bastards) + ' of the ';
+    content += _.sample(vocabulary.internet) + '.';
 };
 
 // Prepare the Ajax request
