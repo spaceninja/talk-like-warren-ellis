@@ -373,4 +373,8 @@ body {
   @media screen and (min-width: 480px) {
     body {
       padding: 2em; } }
+
+h1 {
+  font-weight: 200;
+  font-size: 4em; }
 /*# sourceMappingURL=main.css.map */
