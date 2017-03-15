@@ -24,7 +24,7 @@ var ellisMyLittleLabel = function(vocabulary) {
             // eg, "my sexy mammals of the internet"
             label += _.sample(vocabulary.sexy) + ' ';
             label += _.sample(vocabulary.mammals) + ' of ';
-            if (_.random(1, 100) < 50) {
+            if (_.random(1, 100) <= 50) {
                 label += _.sample(vocabulary.sexiness) + '.';
             } else {
                 label += 'the ' + _.sample(vocabulary.internet) + '.';
@@ -59,7 +59,7 @@ var ellisMyLittleLabel = function(vocabulary) {
             label += 'little ';
             label += _.sample(vocabulary.sex) + ' ';
             label += _.sample(vocabulary.mammals) + ' of ';
-            if (_.random(1, 100) < 50) {
+            if (_.random(1, 100) <= 50) {
                 label += _.sample(vocabulary.ill_omen) + '.';
             } else {
                 label += 'the ' + _.sample(vocabulary.internet) + '.';
@@ -89,7 +89,7 @@ var ellisLabel = function(vocabulary) {
 
         case 1:
             // eg, "horrible glowing scum"
-            if (_.random(1, 100) < 50) {
+            if (_.random(1, 100) <= 50) {
                 label += _.sample(vocabulary.filthy) + ' ';
             } else {
                 label += _.sample(vocabulary.sublime) + ' ';
@@ -105,7 +105,7 @@ var ellisLabel = function(vocabulary) {
 
         case 3:
             // eg, "sexy beasts of the apocalypse"
-            if (_.random(1, 100) < 50) {
+            if (_.random(1, 100) <= 50) {
                 label += _.sample(vocabulary.sexy) + ' ';
             }
             label += _.sample(vocabulary.beasts) + ' of ';
@@ -116,7 +116,7 @@ var ellisLabel = function(vocabulary) {
             // eg, "internet scum horde"
             label += _.sample(vocabulary.internet) + ' ';
             label += singularize(_.sample(vocabulary.scum)) + ' ';
-            if (_.random(1, 100) < 50) {
+            if (_.random(1, 100) <= 50) {
                 label += _.sample(vocabulary.horde) + '.';
             } else {
                 label += 'of ' + _.sample(vocabulary.sexiness) + '.';
@@ -139,12 +139,12 @@ var ellisLabel = function(vocabulary) {
             // eg, "you glowing sex animals of the internet"
             label += 'you ' + _.sample(vocabulary.sublime) + ' ';
             label += _.sample(vocabulary.sex) + ' ';
-            if (_.random(1, 100) < 50) {
+            if (_.random(1, 100) <= 50) {
                 label += _.sample(vocabulary.mammals);
             } else {
                 label += _.sample(vocabulary.beasts);
             }
-            if (_.random(1, 100) < 25) {
+            if (_.random(1, 100) <= 25) {
                 label += ' of the ' + _.sample(vocabulary.internet) + '.';
             } else {
                 label += '.';
@@ -167,7 +167,7 @@ var goodMorningScum = function(vocabulary) {
     // eg, "bastards of the internet"
     greeting += ellisLabel(vocabulary);
 
-    if (_.random(1, 100) < 10) {
+    if (_.random(1, 100) <= 10) {
         // eg, "I hate you"
         greeting += ' ' + _.sample(vocabulary.extra);
     }
@@ -183,7 +183,7 @@ var goodMorningScum = function(vocabulary) {
 var attentionScum = function(vocabulary) {
     var greeting = '';
 
-    if (_.random(1, 100) < 50) {
+    if (_.random(1, 100) <= 50) {
         // eg, "ATTENTION SCUM"
         greeting += _.sample(vocabulary.attention) + ' ';
 
@@ -213,7 +213,7 @@ var attentionScum = function(vocabulary) {
 var buildQuote = function(vocabulary) {
     var quote = '';
 
-    if (_.random(1, 100) < 85) {
+    if (_.random(1, 100) <= 85) {
         // eg, "Good Morning, Scum"
         quote = goodMorningScum(vocabulary);
 
