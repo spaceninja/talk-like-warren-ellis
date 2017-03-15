@@ -142,7 +142,7 @@ var ellisLabel = function(vocabulary) {
             if (_.random(1, 100) < 50) {
                 label += _.sample(vocabulary.mammals);
             } else {
-                label += 'of ' + _.sample(vocabulary.beasts);
+                label += _.sample(vocabulary.beasts);
             }
             if (_.random(1, 100) < 25) {
                 label += ' of the ' + _.sample(vocabulary.internet) + '.';
@@ -167,7 +167,7 @@ var goodMorningScum = function(vocabulary) {
     // eg, "bastards of the internet"
     greeting += ellisLabel(vocabulary);
 
-    if (_.random(1, 100) < 10) { // 10% chance
+    if (_.random(1, 100) < 10) {
         // eg, "I hate you"
         greeting += ' ' + _.sample(vocabulary.extra);
     }
