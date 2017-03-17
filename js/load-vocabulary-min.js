@@ -1,0 +1,1 @@
+var loadData=function(e,o){var s=new XMLHttpRequest;s.open("GET",e),s.onload=function(){if(s.status>=200&&s.status<400){console.log("Data loaded successfully; server code: "+s.status);o(JSON.parse(s.responseText))}else console.log("Data did not load successfully; error code: "+s.status)},s.onerror=function(){console.log("There was a network error.")},s.send()};
