@@ -1,4 +1,4 @@
-var loadData = function(url) {
+var loadData = function(url, successCallback) {
 
     // Standard XHR to load data from a URL
     var request = new XMLHttpRequest();
@@ -11,20 +11,17 @@ var loadData = function(url) {
         if (request.status >= 200 && request.status < 400) {
             console.log('Data loaded successfully; server code: ' + request.status);
             var vocabulary = JSON.parse(request.responseText);
-            console.log(vocabulary);
-            return vocabulary;
+            successCallback(vocabulary);
 
         // We got an error code from the server
         } else {
             console.log('Data did not load successfully; error code: ' + request.status);
-            return false;
         }
     };
 
     // Handle an Ajax connection error
     request.onerror = function() {
         console.log('There was a network error.');
-        return false;
     };
 
     // Send the request

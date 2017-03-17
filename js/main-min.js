@@ -1,1 +1,1 @@
-var vocabulary=loadData("data/vocabulary.json");document.getElementById("quote").innerHTML=talkLikeWarrenEllis(vocabulary);
+loadData("data/vocabulary.json",function(a){console.log(a),document.getElementById("quote").innerHTML=talkLikeWarrenEllis(a)});
