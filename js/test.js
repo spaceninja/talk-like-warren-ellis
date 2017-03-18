@@ -1,5 +1,5 @@
 /* global loadData, talkLikeWarrenEllis */
-loadData('/data/vocabulary.json', function(vocabulary) {
+loadData('../data/vocabulary.json', function(vocabulary) {
     var content = "";
 
     for (var i = 100 - 1; i >= 0; i--) {

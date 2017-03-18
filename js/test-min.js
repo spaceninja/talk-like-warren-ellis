@@ -1,1 +1,1 @@
-loadData("/data/vocabulary.json",function(a){for(var t="",e=99;e>=0;e--)t+="<li>"+talkLikeWarrenEllis(a)+"</li>";document.getElementById("test-array").innerHTML=t});
+loadData("../data/vocabulary.json",function(a){for(var t="",e=99;e>=0;e--)t+="<li>"+talkLikeWarrenEllis(a)+"</li>";document.getElementById("test-array").innerHTML=t});
