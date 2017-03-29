@@ -1,1 +1,1 @@
-loadData("data/vocabulary.json",function(a){document.getElementById("quote").innerHTML=talkLikeWarrenEllis(a)});
+loadData("data/vocabulary.json",function(t){var e=talkLikeWarrenEllis(t),o=encodeURIComponent(e),n=encodeURIComponent("http://talklikewarrenellis.com"),r="https://twitter.com/intent/tweet?text="+o+"&url="+n,a="https://www.facebook.com/sharer/sharer.php?quote="+o+"&u="+n+"&display=popup";document.getElementById("quote").innerHTML=e,document.getElementById("twitter").setAttribute("href",r),document.getElementById("facebook").setAttribute("href",a)});
