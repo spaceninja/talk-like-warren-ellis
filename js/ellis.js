@@ -1,16 +1,4 @@
-/* global _ */
-
-//
-// Depluralize words that end in "s"
-//
-var singularize = function(word) {
-    word = word.trim();
-    if (word.substr(-1) === 's') {
-        return word.slice(0, -1);
-    } else {
-        return word;
-    }
-};
+/* global _, pluralize */
 
 //
 // Things Warren Ellis Calls "My Little X"
@@ -114,7 +102,7 @@ var ellisLabel = function(vocabulary) {
         case 4:
             // eg, "internet scum horde"
             label += _.sample(vocabulary.internet) + ' ';
-            label += singularize(_.sample(vocabulary.scum)) + ' ';
+            label += pluralize.singular(_.sample(vocabulary.scum)) + ' ';
             if (_.random(1, 100) <= 50) {
                 label += _.sample(vocabulary.horde) + '.';
             } else {
